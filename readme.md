@@ -1,6 +1,6 @@
 # Javascript Gacha System
 
-Source code for gacha system with item drop rate.
+Source code for gacha system with entirely customizable drop rate for each item.
 
 ## How To Use
 
