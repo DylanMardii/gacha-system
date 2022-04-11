@@ -50,7 +50,7 @@ let list = [
 	},
 ];
 
-// If the total drop rate is less than or more than 100,
+// If the total drop rate listed abovve is less than or more than 100,
 // change totalDropRate variable based on the total drop rate.
 
 let totalDropRate = 100;
