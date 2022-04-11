@@ -13,7 +13,7 @@ function gacha(items) {
 	return items[itemIdx].data;
 }
 
-function rateListing(items, digitAfterComma, prefix = "", suffix = "%") {
+function rateListing(items, digitAfterComma = 3, prefix = "", suffix = "%") {
 	return items.reduce((a, b) => {
 		return `${a}${prefix}${b.data.name} ${b.rate.toFixed(digitAfterComma)}${suffix}\n`;
 	}, "");
