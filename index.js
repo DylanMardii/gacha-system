@@ -78,6 +78,18 @@ let itemList = [
 
 // Usage Sample
 console.log(gacha(itemList));
+/* { id: 7, name: 'A [Evo] Mari Bag II', isMaterial: true } */
 
 // Usage Sample
 console.log(rateListing(itemList));
+/* 
+S+ [Evo] Mari 0.001%
+S [Evo] Mari Doll 0.009%
+A+ Sand Castle I 5.095%
+A+ Sand Castle II 3.432%
+A+ Sand Castle III 1.563%
+A [Evo] Mari Bag I 2.697%
+A [Evo] Mari Bag II 12.586%
+A [Evo] Mari Necklace I 29.667%
+A [Evo] Mari Necklace II 44.950%
+*/
