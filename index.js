@@ -1,77 +1,83 @@
-// Javascript Gacha System
+let { gacha, rateListing } = require("./gacha-system");
 
-// Make sure the items' drop rate in the list are summed up to 100.
-
-let list = [
+// TODO: You can put the drop rate list to a separated JSON file.
+let itemList = [
 	{
-		id: 1,
-		name: "S+ [Evo] Mari",
 		rate: 0.001,
+		data: {
+			id: 1,
+			name: "S+ [Evo] Mari",
+			isMaterial: false,
+		},
 	},
 	{
-		id: 2,
-		name: "S [Evo] Mari Doll",
 		rate: 0.009,
+		data: {
+			id: 2,
+			name: "S [Evo] Mari Doll",
+			isMaterial: true,
+		},
 	},
 	{
-		id: 3,
-		name: "A+ Sand Castle I",
 		rate: 5.095,
+		data: {
+			id: 3,
+			name: "A+ Sand Castle I",
+			isMaterial: true,
+		},
 	},
 	{
-		id: 4,
-		name: "A+ Sand Castle II",
 		rate: 3.432,
+		data: {
+			id: 4,
+			name: "A+ Sand Castle II",
+			isMaterial: true,
+		},
 	},
 	{
-		id: 5,
-		name: "A+ Sand Castle III",
 		rate: 1.563,
+		data: {
+			id: 5,
+			name: "A+ Sand Castle III",
+			isMaterial: true,
+		},
 	},
 	{
-		id: 6,
-		name: "A [Evo] Mari Bag I",
 		rate: 2.697,
+		data: {
+			id: 6,
+			name: "A [Evo] Mari Bag I",
+			isMaterial: true,
+		},
 	},
 	{
-		id: 7,
-		name: "A [Evo] Mari Bag II",
 		rate: 12.586,
+		data: {
+			id: 7,
+			name: "A [Evo] Mari Bag II",
+			isMaterial: true,
+		},
 	},
 	{
-		id: 8,
-		name: "A [Evo] Mari Necklace I",
 		rate: 29.667,
+		data: {
+			id: 8,
+			name: "A [Evo] Mari Necklace I",
+			isMaterial: true,
+		},
 	},
 	{
-		id: 9,
-		name: "A [Evo] Mari Necklace II",
 		rate: 44.95,
+		data: {
+			id: 9,
+			name: "A [Evo] Mari Necklace II",
+			isMaterial: true,
+		},
 	},
 ];
 
-// If the total drop rate listed abovve is less than or more than 100,
-// change totalDropRate variable based on the total drop rate.
+// Usage Sample
+console.log(gacha(itemList));
 
-let totalDropRate = 100;
-
-// This function will return one item on the list based on the assigned drop rate.
-function gacha(items) {
-	const random = Math.random() * totalDropRate;
-
-	let itemIdx = 0;
-	let rateAccumulation = 0;
-
-	while (rateAccumulation <= random) {
-		rateAccumulation += items[itemIdx].rate;
-		if (rateAccumulation <= random) itemIdx++;
-	}
-
-	return items[itemIdx];
-}
-
-// Usage sample
-console.log("You got: \n");
-for (i = 0; i < 5; i++) {
-	console.log(gacha(list).name);
-}
+// Usage Sample
+console.log(rateListing(itemList));
